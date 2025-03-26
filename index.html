@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ramya V - Portfolio</title>
+    <style>
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+            color: #333;
+            box-sizing: border-box;
+        }
+        header {
+            background-color: #1e3a8a;
+            color: #ffffff;
+            padding: 3rem 2rem;
+            text-align: center;
+            position: relative;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+        }
+        .header-content h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        .header-content p {
+            font-size: 1.2rem;
+            font-weight: 300;
+            margin: 0.5rem 0;
+            opacity: 0.8;
+        }
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 75px;
+            left: 75px;
+        }
+        nav {
+            margin: 2rem 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #1e3a8a;
+            font-size: 1rem;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            transition: all 0.3s ease;
+            border-radius: 20px;
+        }
+        nav ul li a:hover {
+            background-color: #bfdbfe;
+            color: #0c2e60;
+        }
+        .section-content {
+            background-color: #ffffff;
+            padding: 2rem;
+            margin: 2rem auto;
+            max-width: 800px;
+            border-radius: 12px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .section-content:hover {
+            transform: translateY(-5px);
+        }
+        h2 {
+            color: #1e3a8a;
+            font-size: 1.8rem;
+            border-bottom: 3px solid #bfdbfe;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+        ul {
+            padding-left: 20px;
+            line-height: 1.8;
+        }
+        .project-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .project-item {
+            background-color: #f9fafb;
+            border-radius: 12px;
+            padding: 1rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+        }
+        .download-button {
+            background-color: #1e3a8a;
+            color: #ffffff;
+            padding: 0.7rem 1.5rem;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: 500;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+            box-shadow: 0 4px 12px rgba(30, 58, 138, 0.3);
+        }
+        .download-button:hover {
+            background-color: #0c2e60;
+        }
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: #1e3a8a;
+            color: #ffffff;
+            font-size: 1rem;
+            margin-top: 2rem;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+        }
+        a {
+            color: #1e3a8a;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #0c2e60;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <img src="c:\Photo.jpeg" alt="Ramya V" class="profile-picture" />
+    <div class="header-content">
+        <h1>Ramya V</h1>
+        <p>A 2nd-year Computer Science student passionate about web development.</p>
+        <p>Future Web Developer</p>
+    </div>
+</header>
+<nav>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#resume">Resume</a></li>
+    </ul>
+</nav>
+<section id="about" class="section-content">
+    <h2>About Me</h2>
+    <p>
+        I am a passionate and motivated web development enthusiast, eager to create dynamic and user-friendly websites.
+        I am constantly exploring the latest trends and technologies, dedicated to strengthening my coding skills
+        and gaining hands-on experience.
+    </p>
+</section>
+<section id="education" class="section-content">
+    <h2>Education</h2>
+    <p><strong>Madras University</strong> – BSc Computer Science (Pursuing)</p>
+</section>
+<section id="skills" class="section-content">
+    <h2>Skills</h2>
+    <ul>
+        <li>Python</li>
+        <li>Java</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>C++</li>
+    </ul>
+</section>
+<section id="projects" class="section-content">
+    <h2>Projects</h2>
+    <div class="project-list">
+        <div class="project-item">
+            <h3>Landing Page</h3>
+            <a href="c:\Users\DELL-R7\OneDrive\web intership codsoft.html" target="_blank">View Project</a>
+        </div>
+        <div class="project-item">
+            <h3>Sample Portfolio</h3>
+            <a href="c:\Users\DELL-R7\OneDrive\we project cosoft 2.html" target="_blank">View Project</a>
+        </div>
+        <div class="project-item">
+            <h3>Calculator</h3>
+            <a href="c:\Users\DELL-R7\OneDrive\demo task 3.html" target="_blank">View Project</a>
+        </div>
+    </div>
+</section>
+<section id="resume" class="section-content" style="text-align: center;">
+    <h2>Resume</h2>
+    <a href="c:\Resume.pdf" target="_blank" class="download-button">Download CV</a>
+</section>
+<footer>
+    <p>&copy; 2025 Ramya V. All Rights Reserved.</p>
+</footer>
+<script>
+    // Smooth scroll for nav links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 50,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+</script>
+</body>
+</html>
