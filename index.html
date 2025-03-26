@@ -6,20 +6,18 @@
     <title>Ramya V | Web Developer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
             --primary: #4f46e5;
-            --primary-dark: #3730a3;
-            --secondary: #10b981;
+            --primary-light: #6366f1;
             --dark: #1e293b;
             --light: #f8fafc;
             --gray: #64748b;
             --light-gray: #e2e8f0;
-            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            --shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            --transition: all 0.3s ease;
+            --shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
         * {
@@ -32,120 +30,76 @@
             font-family: 'Poppins', sans-serif;
             background-color: var(--light);
             color: var(--dark);
-            line-height: 1.6;
-            overflow-x: hidden;
+            line-height: 1.0;
         }
 
-        /* Header with animated gradient */
+        /* Simplified Header */
         header {
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            background: var(--primary);
             color: white;
-            padding: 6rem 2rem 8rem;
+            padding: 3rem 1rem;
             text-align: center;
-            position: relative;
-            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-            animation: gradientShift 8s ease infinite;
-            background-size: 200% 200%;
-        }
-
-        @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        .header-content {
-            max-width: 800px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 2;
-        }
-
-        .header-content h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3.5rem;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        .header-content p {
-            font-size: 1.3rem;
-            max-width: 600px;
-            margin: 0 auto 1.5rem;
-            opacity: 0.9;
         }
 
         .profile-picture {
-            width: 180px;
-            height: 180px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
             object-fit: cover;
-            border: 5px solid white;
+            border: 4px solid white;
             box-shadow: var(--shadow);
-            margin-bottom: 1.5rem;
-            transition: var(--transition);
+            margin-bottom: 1rem;
         }
 
-        .profile-picture:hover {
-            transform: scale(1.05) rotate(5deg);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
         }
 
-        /* Floating navigation */
+        /* Simplified Navigation */
         nav {
             background: white;
             box-shadow: var(--shadow);
-            border-radius: 50px;
-            padding: 0.8rem 1.5rem;
-            max-width: fit-content;
-            margin: -2rem auto 3rem;
-            position: relative;
+            padding: 0.5rem;
+            position: sticky;
+            top: 0;
             z-index: 100;
         }
 
         nav ul {
             list-style: none;
             display: flex;
-            gap: 1.5rem;
-            flex-wrap: wrap;
             justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
         }
 
         nav ul li a {
             text-decoration: none;
             color: var(--dark);
             font-weight: 500;
-            padding: 0.5rem 1rem;
-            border-radius: 30px;
+            padding: 0.5rem 0.5rem;
+            border-radius: 4px;
             transition: var(--transition);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
         }
 
         nav ul li a:hover, nav ul li a.active {
-            background: var(--primary);
+            background: var(--primary-light);
             color: white;
-            transform: translateY(-3px);
         }
 
-        nav ul li a i {
-            font-size: 0.9rem;
-        }
-
-        /* Section styling */
+        /* Simplified Sections */
         section {
-            padding: 5rem 2rem;
-            max-width: 1200px;
+            padding: 3rem 2rem;
+            max-width: 1000px;
             margin: 0 auto;
         }
 
         .section-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            color: var(--primary-dark);
-            margin-bottom: 3rem;
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 2rem;
             text-align: center;
             position: relative;
         }
@@ -153,50 +107,37 @@
         .section-title:after {
             content: '';
             position: absolute;
-            bottom: -10px;
+            bottom: -8px;
             left: 50%;
             transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: var(--secondary);
-            border-radius: 2px;
+            width: 60px;
+            height: 3px;
+            background: var(--primary);
         }
 
         .section-content {
             background: white;
-            border-radius: 12px;
-            padding: 2.5rem;
+            border-radius: 8px;
+            padding: 2rem;
             box-shadow: var(--shadow);
-            transition: var(--transition);
-            margin-bottom: 2rem;
-        }
-
-        .section-content:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-hover);
-        }
-
-        /* About section */
-        .about-text {
-            font-size: 1.1rem;
-            color: var(--dark);
-            line-height: 1.8;
-        }
-
-        .about-text p {
             margin-bottom: 1.5rem;
         }
 
-        /* Education timeline */
+        /* About Section */
+        .about-text p {
+            margin-bottom: 1rem;
+        }
+
+        /* Education Timeline */
         .timeline {
             position: relative;
-            padding-left: 3rem;
+            padding-left: 2rem;
         }
 
         .timeline:before {
             content: '';
             position: absolute;
-            left: 20px;
+            left: 10px;
             top: 0;
             bottom: 0;
             width: 2px;
@@ -205,171 +146,102 @@
 
         .timeline-item {
             position: relative;
-            padding-bottom: 2.5rem;
-        }
-
-        .timeline-item:last-child {
-            padding-bottom: 0;
+            padding-bottom: 2rem;
         }
 
         .timeline-dot {
             position: absolute;
-            left: -3rem;
+            left: -22px;
             top: 0;
-            width: 40px;
-            height: 40px;
+            width: 20px;
+            height: 20px;
             border-radius: 50%;
             background: var(--primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.2rem;
-            box-shadow: 0 0 0 4px white, 0 4px 8px rgba(79, 70, 229, 0.3);
-        }
-
-        .timeline-content {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border: 3px solid white;
         }
 
         .timeline-date {
             font-size: 0.9rem;
             color: var(--gray);
-            margin-bottom: 0.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
+            margin-bottom: 0.3rem;
         }
 
         .timeline-title {
             font-weight: 600;
             margin-bottom: 0.5rem;
-            color: var(--primary-dark);
+            color: var(--primary);
         }
 
-        /* Skills section */
+        /* Skills Section */
         .skills-container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
         }
 
         .skill-card {
             background: white;
-            border-radius: 8px;
-            padding: 1.5rem;
+            border-radius: 6px;
+            padding: 1rem;
             display: flex;
             align-items: center;
             gap: 1rem;
-            transition: var(--transition);
             border: 1px solid var(--light-gray);
         }
 
-        .skill-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary);
-        }
-
         .skill-icon {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
+            color: var(--primary);
             font-size: 1.5rem;
-            flex-shrink: 0;
         }
 
-        .skill-info h3 {
-            font-weight: 600;
-            margin-bottom: 0.3rem;
-        }
-
-        .skill-info p {
-            color: var(--gray);
-            font-size: 0.9rem;
-        }
-
-        /* Projects section */
+        /* Projects Section */
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
         }
 
         .project-card {
             background: white;
-            border-radius: 12px;
+            border-radius: 8px;
             overflow: hidden;
             box-shadow: var(--shadow);
-            transition: var(--transition);
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
-
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-hover);
         }
 
         .project-image {
-            height: 200px;
+            height: 160px;
             overflow: hidden;
-            position: relative;
         }
 
         .project-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .project-card:hover .project-image img {
-            transform: scale(1.1);
         }
 
         .project-content {
             padding: 1.5rem;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
         }
 
         .project-title {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             font-weight: 600;
             margin-bottom: 0.5rem;
-            color: var(--primary-dark);
-        }
-
-        .project-description {
-            color: var(--gray);
-            margin-bottom: 1rem;
-            flex-grow: 1;
+            color: var(--primary);
         }
 
         .project-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 0.5rem;
-            margin-bottom: 1.5rem;
+            margin: 1rem 0;
         }
 
         .project-tag {
             background: var(--light-gray);
-            color: var(--dark);
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
             font-size: 0.8rem;
-            font-weight: 500;
         }
 
         .project-links {
@@ -378,11 +250,8 @@
         }
 
         .project-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
             padding: 0.5rem 1rem;
-            border-radius: 6px;
+            border-radius: 4px;
             font-weight: 500;
             text-decoration: none;
             transition: var(--transition);
@@ -398,198 +267,88 @@
             color: var(--primary);
         }
 
-        .project-link:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-
-        /* Resume section */
+        /* Resume Section */
         .resume-container {
             text-align: center;
-            padding: 3rem 0;
-        }
-
-        .resume-text {
-            max-width: 600px;
-            margin: 0 auto 2rem;
-            color: var(--gray);
         }
 
         .download-button {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.8rem;
+            display: inline-block;
             background: var(--primary);
             color: white;
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            font-weight: 600;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 500;
             text-decoration: none;
+            margin-top: 1rem;
             transition: var(--transition);
-            box-shadow: 0 4px 6px rgba(79, 70, 229, 0.2);
         }
 
         .download-button:hover {
-            background: var(--primary-dark);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 15px rgba(79, 70, 229, 0.3);
+            background: var(--primary-light);
         }
 
         /* Footer */
         footer {
             background: var(--dark);
             color: white;
-            padding: 4rem 2rem;
+            padding: 3rem 2rem;
             text-align: center;
-            clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
-        }
-
-        .footer-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .footer-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .footer-text {
-            color: var(--light-gray);
-            margin-bottom: 2rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
         }
 
         .social-links {
             display: flex;
             justify-content: center;
-            gap: 1.5rem;
-            margin-bottom: 2rem;
+            gap: 1rem;
+            margin: 1.5rem 0;
         }
 
         .social-link {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.3rem;
             color: white;
+            font-size: 1.2rem;
             transition: var(--transition);
         }
 
         .social-link:hover {
-            background: var(--primary);
-            transform: translateY(-5px);
+            color: var(--primary-light);
         }
 
-        .copyright {
-            color: var(--light-gray);
-            font-size: 0.9rem;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255,255,255,0.1);
-        }
-
-        /* Back to top button */
-        .back-to-top {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            width: 50px;
-            height: 50px;
-            background: var(--primary);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            text-decoration: none;
-            opacity: 0;
-            visibility: hidden;
-            transition: var(--transition);
-            z-index: 99;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        }
-
-        .back-to-top.visible {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .back-to-top:hover {
-            background: var(--primary-dark);
-            transform: translateY(-5px);
-        }
-
-        /* Responsive design */
+        /* Responsive */
         @media (max-width: 768px) {
             header {
-                padding: 4rem 1.5rem 6rem;
-                clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
-            }
-
-            .header-content h1 {
-                font-size: 2.5rem;
-            }
-
-            .profile-picture {
-                width: 140px;
-                height: 140px;
-            }
-
-            nav ul {
-                gap: 0.8rem;
-            }
-
-            nav ul li a {
-                padding: 0.5rem;
-                font-size: 0.9rem;
-            }
-
-            section {
                 padding: 3rem 1.5rem;
             }
-
+            
             .section-title {
-                font-size: 2rem;
-                margin-bottom: 2rem;
+                font-size: 1.8rem;
             }
-
+            
             .section-content {
                 padding: 1.5rem;
             }
-
-            .projects-grid {
-                grid-template-columns: 1fr;
+            
+            .skills-container {
+                grid-template-columns: 1fr 1fr;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Header with animated background -->
+    <!-- Header -->
     <header>
-        <div class="header-content">
-            <img src="Photo.jpeg" alt="Ramya V" class="profile-picture" />
-            <h1>Ramya V</h1>
-            <p>A passionate Computer Science student specializing in web development</p>
-            <p>Creating digital experiences that matter</p>
-        </div>
+        <img src="Photo.jpeg" alt="Ramya V" class="profile-picture" />
+        <h1>Ramya V</h1>
+        <p>Web Developer | Computer Science Student</p>
     </header>
 
     <!-- Navigation -->
     <nav>
         <ul>
-            <li><a href="#about" class="active"><i class="fas fa-user"></i> About</a></li>
-            <li><a href="#education"><i class="fas fa-graduation-cap"></i> Education</a></li>
-            <li><a href="#skills"><i class="fas fa-code"></i> Skills</a></li>
-            <li><a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
-            <li><a href="#resume"><i class="fas fa-file-alt"></i> Resume</a></li>
+            <li><a href="#about" class="active">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#resume">Resume</a></li>
         </ul>
     </nav>
 
@@ -598,10 +357,9 @@
         <h2 class="section-title">About Me</h2>
         <div class="section-content">
             <div class="about-text">
-                <p>Hello! I'm Ramya, a second-year Computer Science student at Madras University with a burning passion for web development and creating exceptional digital experiences.</p>
-                <p>My journey in tech began when I built my first website at 18, and since then I've been on a mission to master both the art and science of web development. I believe in clean, efficient code that creates intuitive, beautiful interfaces.</p>
-                <p>When I'm not coding, you can find me contributing to open-source projects, attending hackathons, or exploring the latest frameworks and design trends. I'm particularly fascinated by the intersection of design and technology.</p>
-                <p>I'm currently looking for internship opportunities where I can apply my skills, learn from experienced developers, and contribute to meaningful projects.</p>
+                <p>I'm Ramya, a Computer Science student passionate about web development. I specialize in creating clean, efficient websites with intuitive interfaces.</p>
+                <p>Currently pursuing my degree at Madras University while building projects and expanding my skills in modern web technologies.</p>
+                <p>Looking for opportunities to apply my knowledge and grow as a developer through internships and collaborations.</p>
             </div>
         </div>
     </section>
@@ -612,29 +370,19 @@
         <div class="section-content">
             <div class="timeline">
                 <div class="timeline-item">
-                    <div class="timeline-dot">
-                        <i class="fas fa-university"></i>
-                    </div>
+                    <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <div class="timeline-date">
-                            <i class="far fa-calendar-alt"></i> 2022 - Present
-                        </div>
-                        <h3 class="timeline-title">Bachelor of Science in Computer Science</h3>
+                        <div class="timeline-date">2022 - Present</div>
+                        <h3 class="timeline-title">B.Sc Computer Science</h3>
                         <p>Madras University</p>
-                        <p>Currently in my second year with a focus on web technologies and software development.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
-                    <div class="timeline-dot">
-                        <i class="fas fa-school"></i>
-                    </div>
+                    <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <div class="timeline-date">
-                            <i class="far fa-calendar-alt"></i> 2020 - 2022
-                        </div>
-                        <h3 class="timeline-title">Higher Secondary Education</h3>
+                        <div class="timeline-date">2020 - 2022</div>
+                        <h3 class="timeline-title">Higher Secondary</h3>
                         <p>Computer Science Stream</p>
-                        <p>Graduated with distinction, laying the foundation for my programming journey.</p>
                     </div>
                 </div>
             </div>
@@ -643,61 +391,49 @@
 
     <!-- Skills Section -->
     <section id="skills">
-        <h2 class="section-title">My Skills</h2>
+        <h2 class="section-title">Skills</h2>
         <div class="section-content">
             <div class="skills-container">
                 <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fab fa-python"></i>
-                    </div>
-                    <div class="skill-info">
+                    <i class="fab fa-python skill-icon"></i>
+                    <div>
                         <h3>Python</h3>
-                        <p>Data structures, algorithms, and Django framework</p>
+                        
                     </div>
                 </div>
                 <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fab fa-java"></i>
-                    </div>
-                    <div class="skill-info">
+                    <i class="fab fa-java skill-icon"></i>
+                    <div>
                         <h3>Java</h3>
-                        <p>OOP concepts and application development</p>
+                       
                     </div>
                 </div>
                 <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fab fa-html5"></i>
-                    </div>
-                    <div class="skill-info">
+                    <i class="fab fa-html5 skill-icon"></i>
+                    <div>
                         <h3>HTML5</h3>
-                        <p>Semantic markup and accessibility standards</p>
+                        
                     </div>
                 </div>
                 <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fab fa-css3-alt"></i>
-                    </div>
-                    <div class="skill-info">
+                    <i class="fab fa-css3-alt skill-icon"></i>
+                    <div>
                         <h3>CSS3</h3>
-                        <p>Responsive design and modern layouts</p>
+                        
                     </div>
                 </div>
                 <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fab fa-js"></i>
-                    </div>
-                    <div class="skill-info">
+                    <i class="fab fa-js skill-icon"></i>
+                    <div>
                         <h3>JavaScript</h3>
-                        <p>Interactive web applications</p>
+                       
                     </div>
                 </div>
                 <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <div class="skill-info">
+                    <i class="fas fa-code skill-icon"></i>
+                    <div>
                         <h3>C++</h3>
-                        <p>Problem solving and competitive programming</p>
+                        
                     </div>
                 </div>
             </div>
@@ -706,67 +442,55 @@
 
     <!-- Projects Section -->
     <section id="projects">
-        <h2 class="section-title">My Projects</h2>
+        <h2 class="section-title">Projects</h2>
         <div class="projects-grid">
             <div class="project-card">
                 <div class="project-image">
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Landing Page Project">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Landing Page">
                 </div>
                 <div class="project-content">
                     <h3 class="project-title">Modern Landing Page</h3>
-                    <p class="project-description">A responsive landing page for a tech startup with smooth animations and clean design.</p>
+                    <p>A responsive landing page with clean design.</p>
                     <div class="project-tags">
                         <span class="project-tag">HTML</span>
                         <span class="project-tag">CSS</span>
-                        <span class="project-tag">JavaScript</span>
+                        <span class="project-tag">JS</span>
                     </div>
                     <div class="project-links">
-                        <a href="Landpage.html" target="_blank" class="project-link primary">
-                            <i class="fas fa-external-link-alt"></i> View Live
-                        </a>
-                        
-                            
-                        </a>
+                        <a href="Landpage.html" class="project-link primary">View Live</a>
                     </div>
                 </div>
             </div>
             <div class="project-card">
                 <div class="project-image">
-                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Portfolio Project">
+                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Portfolio">
                 </div>
                 <div class="project-content">
                     <h3 class="project-title">Interactive Portfolio</h3>
-                    <p class="project-description">A showcase portfolio with dark/light mode toggle and project filtering.</p>
+                    <p>A showcase portfolio with dark/light mode.</p>
                     <div class="project-tags">
                         <span class="project-tag">HTML</span>
                         <span class="project-tag">CSS</span>
-                        <span class="project-tag">JavaScript</span>
+                        <span class="project-tag">JS</span>
                     </div>
                     <div class="project-links">
-                        <a href="Portifoilo demo.html" target="_blank" class="project-link primary">
-                            <i class="fas fa-external-link-alt"></i> View Live
-                        </a>
-                       
+                        <a href="Portifoilo demo.html" class="project-link primary">View Live</a>
                     </div>
                 </div>
             </div>
             <div class="project-card">
                 <div class="project-image">
-                    <img src="https://images.unsplash.com/photo-1587145820266-a5951ee6f620?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Calculator Project">
+                    <img src="https://images.unsplash.com/photo-1587145820266-a5951ee6f620?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Calculator">
                 </div>
                 <div class="project-content">
                     <h3 class="project-title">Scientific Calculator</h3>
-                    <p class="project-description">A feature-rich calculator with advanced mathematical functions and memory.</p>
+                    <p>Calculator with advanced functions.</p>
                     <div class="project-tags">
                         <span class="project-tag">JavaScript</span>
-                        <span class="project-tag">CSS Grid</span>
-                        <span class="project-tag">Responsive</span>
+                        <span class="project-tag">CSS</span>
                     </div>
                     <div class="project-links">
-                        <a href="calculator.html" target="_blank" class="project-link primary">
-                            <i class="fas fa-external-link-alt"></i> View Live
-                        </a>
-                        
+                        <a href="calculator.html" class="project-link primary">View Live</a>
                     </div>
                 </div>
             </div>
@@ -775,83 +499,60 @@
 
     <!-- Resume Section -->
     <section id="resume">
-        <h2 class="section-title">My Resume</h2>
+        <h2 class="section-title">Resume</h2>
         <div class="section-content">
             <div class="resume-container">
-                <p class="resume-text">Download my complete resume to learn more about my education, skills, projects, and achievements in detail.</p>
-                <a href="Resume.pdf" target="_blank" class="download-button">
-                    <i class="fas fa-download"></i> Download Resume
-                </a>
+                <p>Download my complete resume for more details.</p>
+                <a href="Resume.pdf" class="download-button">Download Resume</a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <div class="footer-content">
-            <h3 class="footer-title">Let's Connect</h3>
-            <p class="footer-text">I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision.</p>
-            <div class="social-links">
-                <a href="https://github.com/ramya28112005" class="social-link"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/ramya-v-b317232ba?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-               
-                <a href="mail to:ramyasahana2@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
-            </div>
-            <p class="copyright">&copy; 2025 Ramya V. All Rights Reserved.</p>
+        <h3>Let's Connect</h3>
+        <div class="social-links">
+            <a href="https://github.com/ramya28112005" class="social-link"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/ramya-v-b317232ba" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+            <a href="mailto:ramyasahana2@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
         </div>
+        <p>&copy; 2025 Ramya V. All rights reserved.</p>
     </footer>
 
-    <!-- Back to top button -->
-    <a href="#" class="back-to-top" id="backToTop">
-        <i class="fas fa-arrow-up"></i>
-    </a>
-
     <script>
-        // Smooth scroll for navigation links
+        // Smooth scroll for navigation
         document.querySelectorAll('nav a').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 
-                // Remove active class from all nav items
                 document.querySelectorAll('nav a').forEach(link => {
                     link.classList.remove('active');
                 });
                 
-                // Add active class to clicked nav item
                 this.classList.add('active');
                 
                 const targetId = this.getAttribute('href');
                 const targetElement = document.querySelector(targetId);
                 
                 window.scrollTo({
-                    top: targetElement.offsetTop - 80,
+                    top: targetElement.offsetTop - 70,
                     behavior: 'smooth'
                 });
             });
         });
 
-        // Back to top button visibility
-        const backToTopButton = document.getElementById('backToTop');
+        // Set active nav item on scroll
         window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                backToTopButton.classList.add('visible');
-            } else {
-                backToTopButton.classList.remove('visible');
-            }
-        });
-
-        // Set active nav item based on scroll position
-        const sections = document.querySelectorAll('section');
-        const navItems = document.querySelectorAll('nav a');
-        
-        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            const navItems = document.querySelectorAll('nav a');
+            
             let current = '';
             
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
                 const sectionHeight = section.clientHeight;
                 
-                if (window.pageYOffset >= sectionTop - 150) {
+                if (window.pageYOffset >= sectionTop - 100) {
                     current = section.getAttribute('id');
                 }
             });
@@ -863,31 +564,6 @@
                 }
             });
         });
-
-        // Animation on scroll
-        const animateOnScroll = () => {
-            const elements = document.querySelectorAll('.section-content, .project-card, .skill-card');
-            
-            elements.forEach(element => {
-                const elementPosition = element.getBoundingClientRect().top;
-                const screenPosition = window.innerHeight / 1.2;
-                
-                if (elementPosition < screenPosition) {
-                    element.style.opacity = '1';
-                    element.style.transform = 'translateY(0)';
-                }
-            });
-        };
-
-        // Set initial state for animation
-        document.querySelectorAll('.section-content, .project-card, .skill-card').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        });
-
-        window.addEventListener('scroll', animateOnScroll);
-        window.addEventListener('load', animateOnScroll);
     </script>
 </body>
 </html>
