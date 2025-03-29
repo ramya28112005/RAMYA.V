@@ -1,1 +1,1 @@
-https://github.com/ramya28112005/RAMYA.V.git
+https://ramya28112005.github.io/RAMYA.V/
